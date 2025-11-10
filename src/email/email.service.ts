@@ -22,7 +22,7 @@ export class EmailService {
     const user = this.configService.get<string>('SMTP_USER');
     const pass = this.configService.get<string>('SMTP_PASS');
 
-    this.defaultFrom = this.configService.get<string>('DEFAULT_FROM') || '"No Reply" <noreply@example.com>';
+    this.defaultFrom = this.configService.get<string>('DEFAULT_FROM') || '"No Reply" <lslakshman@gmail.com>';
 
     // ✅ Use SMTPOptions directly for type safety
     const smtpOptions: SMTPTransport.Options = { host, port, secure, auth: user && pass ? { user, pass } : undefined, };
