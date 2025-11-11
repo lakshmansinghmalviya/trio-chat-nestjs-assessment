@@ -4,9 +4,13 @@ import { Document } from 'mongoose';
 export type EmailDocument = Email & Document;
 
 @Schema({ timestamps: true })
-export class Email {
-  @Prop({ required: true })
+export class Email { 
+
+  @Prop({ required: true, trim: true, lowercase: true })
   to!: string;
+ 
+  @Prop({ required: true, trim: true, lowercase: true })
+  from!: string;
 
   @Prop({ required: true })
   subject!: string;

@@ -15,9 +15,13 @@ let Email = class Email {
 };
 exports.Email = Email;
 __decorate([
-    (0, mongoose_1.Prop)({ required: true }),
+    (0, mongoose_1.Prop)({ required: true, trim: true, lowercase: true }),
     __metadata("design:type", String)
 ], Email.prototype, "to", void 0);
+__decorate([
+    (0, mongoose_1.Prop)({ required: true, trim: true, lowercase: true }),
+    __metadata("design:type", String)
+], Email.prototype, "from", void 0);
 __decorate([
     (0, mongoose_1.Prop)({ required: true }),
     __metadata("design:type", String)

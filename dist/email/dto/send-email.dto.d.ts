@@ -3,5 +3,5 @@ export declare class SendEmailDto {
     subject: string;
     text?: string;
     html?: string;
-    from?: string;
+    from: string;
 }

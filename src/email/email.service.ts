@@ -7,6 +7,7 @@ import { SendEmailDto } from './dto/send-email.dto';
 import { Email, EmailDocument } from './schemas/email.schema';
 import { ListLogsOptions } from './interfaces/email-log.interface';
 import SMTPTransport from 'nodemailer/lib/smtp-transport';
+import { from } from 'rxjs';
 
 @Injectable()
 export class EmailService {
@@ -46,6 +47,7 @@ export class EmailService {
       text: mailOptions.text,
       html: mailOptions.html,
       status: 'sent',
+      from : mailOptions.from
     });
 
     try {

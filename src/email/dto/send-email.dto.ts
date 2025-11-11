@@ -20,5 +20,5 @@ export class SendEmailDto {
 
   @IsOptional()
   @IsString()
-  from?: string; // optional override
+  from!: string; // optional override
 }

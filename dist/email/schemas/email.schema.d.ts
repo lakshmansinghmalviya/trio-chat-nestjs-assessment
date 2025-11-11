@@ -2,6 +2,7 @@ import { Document } from 'mongoose';
 export type EmailDocument = Email & Document;
 export declare class Email {
     to: string;
+    from: string;
     subject: string;
     text?: string;
     html?: string;

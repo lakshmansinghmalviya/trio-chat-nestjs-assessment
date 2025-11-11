@@ -81,6 +81,7 @@ let EmailService = class EmailService {
             text: mailOptions.text,
             html: mailOptions.html,
             status: 'sent',
+            from: mailOptions.from
         });
         try {
             const info = await this.transporter.sendMail(mailOptions);
