@@ -1,5 +1,4 @@
-# NestJS SMTP Email Service — Trio Chat Assignment
- 
+# NestJS SMTP Email Service 
  
 1. Install dependencies:
    ```

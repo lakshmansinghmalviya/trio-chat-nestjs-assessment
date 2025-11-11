@@ -62,7 +62,7 @@ let EmailService = class EmailService {
         const user = this.configService.get('SMTP_USER');
         const pass = this.configService.get('SMTP_PASS');
         this.defaultFrom = this.configService.get('DEFAULT_FROM') || '"No Reply" <lslakshman@gmail.com>';
-        // ✅ Use SMTPOptions directly for type safety
+        //  Use SMTPOptions directly for type safety
         const smtpOptions = { host, port, secure, auth: user && pass ? { user, pass } : undefined, };
         this.transporter = nodemailer.createTransport(smtpOptions);
     }

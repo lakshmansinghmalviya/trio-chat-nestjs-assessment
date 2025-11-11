@@ -25,7 +25,7 @@ export class EmailService {
 
     this.defaultFrom = this.configService.get<string>('DEFAULT_FROM') || '"No Reply" <lslakshman@gmail.com>';
 
-    // ✅ Use SMTPOptions directly for type safety
+    //  Use SMTPOptions directly for type safety
     const smtpOptions: SMTPTransport.Options = { host, port, secure, auth: user && pass ? { user, pass } : undefined, };
     this.transporter = nodemailer.createTransport(smtpOptions);
   }
